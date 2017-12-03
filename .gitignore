@@ -1,0 +1,6 @@
+.idea/
+.vscode/
+*.iml
+fonts_in/*
+fonts_out/*
+!.gitkeep
