@@ -29,7 +29,7 @@ def change_font_line_spacing(src_file, dest_dir, ascent, descent):
     font.hhea_descent = descent
     font.hhea_descent_add = False
     dest_file = os.path.basename(src_file)
-    font.generate(dest_file)
+    font.generate(os.path.join(dest_dir, dest_file))
     font.close()
 
 
