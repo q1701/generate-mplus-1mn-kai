@@ -19,8 +19,10 @@ def _replace_glyphs(font, other_font, codepoints):
 
 def _modify_glyphs(font):
     # type: (fontforge.font) -> None
-    ASTERISK = 0x002a
-    font[ASTERISK].transform(psMat.translate(0, -246))
+    code_asterisk = 0x002a
+    font[code_asterisk].transform(psMat.translate(0, -246))
+    code_tilde = 0x007e
+    font[code_tilde].transform(psMat.translate(0, 246))
 
 
 def _merge_glyphs(font, other_font_file):
