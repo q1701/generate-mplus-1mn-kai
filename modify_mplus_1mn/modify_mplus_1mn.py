@@ -47,7 +47,7 @@ def modify_mplus_1mn(mplus_1mn_file, mplus_1m_file, genei_gothic_file, dest_dir)
     _modify_glyphs(font_1mn)
     _merge_glyphs(font_1mn, genei_gothic_file)
     dest_file = os.path.basename(mplus_1mn_file)
-    font_1mn.generate(os.path.join(dest_dir, dest_file))
+    font_1mn.generate(os.path.join(dest_dir, dest_file), flags=('no-hints', 'omit-instructions'))
     font_1mn.close()
     font_1m.close()
 
